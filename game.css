@@ -4,8 +4,71 @@
     font-family: sans-serif;
 }
 
-.background{
-    background-color: #0000007b;
+body{
+    background-color: black;
     height: 100vh;
-    padding-top: 1px;
+    color: white;
+   
+}
+.title{
+    color: green;
+    text-align: center;
+    font-size: 20px;
+   
+   
+}
+.display{
+    color: green;
+    font-size: 18px;
+    text-align: center;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+.hide{
+    display: none;
+}
+.container{
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 35% 35% 35%;
+    grid-template-rows: 35% 35% 35%;
+    max-width: 350px;
+}
+.tile{
+    border: 3px solid green;
+    min-width: 100px;
+    min-height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 70px;
+    cursor: pointer;
+}
+.playerX{
+    color: rgb(80, 231, 10);
+    font-size: 30px;
+}
+.playerO{
+    color: rgb(15, 95, 214);
+    font-size: 30px;
+}
+.controls{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2em;
+}
+#reset{
+    background-color: green;
+    color: yellow;
+    padding: 10px;
+    border-radius: 3px;
+    border: none;
+    font-size: 18px;
+    margin-left: 600px;
+    cursor: pointer;
+    text-align: center;
+    margin-top: 40px;
+    
 }
