@@ -1,8 +1,8 @@
 window.addEventListener('DOMContentLoaded', () =>{
    const tiles = Array.from(document.querySelectorAll('.tile'));
-   const playerDisplay = Array.from(document.querySelectorAll('.player-display'));
-   const resetButton = Array.from(document.querySelectorAll('.#reset'));
-   const announcer = Array.from(document.querySelectorAll('.announcer'));
+   const playerDisplay = document.querySelectorAll('.player-display');
+   const resetButton = document.querySelectorAll('.#reset');
+   const announcer = document.querySelectorAll('.announcer');
 
    let board = ['','','','','','','','',''];
    let currentPlayer = 'X';
@@ -12,7 +12,7 @@ window.addEventListener('DOMContentLoaded', () =>{
    const PLAYERO_WON = 'PLAYER O WON';
    const TIE = 'TIE';
 
-   resetButton.addEventListener('click', resetBoard);
+
 
    const winningConditions = [
      [0,1,2],
@@ -86,7 +86,7 @@ window.addEventListener('DOMContentLoaded', () =>{
     playerDisplay.classList.add(`Player${currentPlayer}`)
    }
 
-   const usrAction = (tile, index) =>{
+   const userAction = (tile, index) =>{
     if(isValidAction(tile) && isGameActive){
         tile.innerText = currentPlayer;
         tile.classList.add(`Player${currentPlayer}`);
